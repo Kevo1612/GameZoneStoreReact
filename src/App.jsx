@@ -3,11 +3,16 @@ import ProductList from "./components/ProductList";
 import Cart from "./components/Cart";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Contacto from "./components/Contacto";
+import FiltroCategoria from "./components/FiltroCategoria";
 import "./App.css";
 
 function App() {
   // Estado para almacenar los productos cargados
   const [productos, setProductos] = useState([]);
+
+  // Estado para almacenar la categoría seleccionada
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("Todas");
 
   // Estado para almacenar los productos del carrito
   const [carrito, setCarrito] = useState([]);
@@ -17,7 +22,7 @@ function App() {
 
   // Cargar productos desde el archivo JSON
   useEffect(() => {
-    fetch("/src/data/productos.json")
+    fetch(`${import.meta.env.BASE_URL}data/productos.json`)
       .then((respuesta) => {
         if (!respuesta.ok) {
           throw new Error("No se pudieron cargar los productos");
@@ -57,6 +62,13 @@ function App() {
     );
   };
 
+  const productosFiltrados =
+  categoriaSeleccionada === "Todas"
+    ? productos
+    : productos.filter(
+        (producto) => producto.categoria === categoriaSeleccionada
+      );
+
   return (
     <>
       <Navbar cantidadCarrito={carrito.length} />
@@ -77,8 +89,13 @@ function App() {
             <section id="catalogo" className="mb-5">
               <h2 className="mb-4">Catálogo de productos</h2>
 
+              <FiltroCategoria
+                categoriaSeleccionada={categoriaSeleccionada}
+                cambiarCategoria={setCategoriaSeleccionada}
+              />
+
               <ProductList
-                productos={productos}
+                productos={productosFiltrados}
                 agregarAlCarrito={agregarAlCarrito}
                 carrito={carrito}
               />
@@ -90,6 +107,8 @@ function App() {
                 eliminarDelCarrito={eliminarDelCarrito}
               />
             </section>
+
+            <Contacto />
           </>
         )}
       </div>

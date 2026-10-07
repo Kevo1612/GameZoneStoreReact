@@ -3,7 +3,7 @@ function ProductCard({ producto, agregarAlCarrito, estaEnCarrito }) {
     <div className="col-md-4 col-lg-3 mb-4">
       <div className="card h-100 shadow-sm">
         <img
-          src={`/${producto.imagen}`}
+          src={`${import.meta.env.BASE_URL}${producto.imagen}`}
           className="card-img-top"
           alt={producto.nombre}
         />

@@ -40,6 +40,12 @@ function Navbar({ cantidadCarrito }) {
                 Accesorios
               </a>
             </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#contacto">
+                Contacto
+              </a>
+            </li>
           </ul>
 
           <a

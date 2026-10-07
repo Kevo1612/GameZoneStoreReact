@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "nombre": "PlayStation 5",
+    "categoria": "Consolas",
+    "precio": 549990,
+    "descripcion": "Consola PlayStation 5 con almacenamiento SSD de alta velocidad.",
+    "imagen": "assets/img/playstation5.avif"
+  },
+  {
+    "id": 2,
+    "nombre": "Xbox Series X",
+    "categoria": "Consolas",
+    "precio": 529990,
+    "descripcion": "Consola Xbox Series X para disfrutar juegos de nueva generación.",
+    "imagen": "assets/img/xbox-series-x.avif"
+  },
+  {
+    "id": 3,
+    "nombre": "Nintendo Switch OLED",
+    "categoria": "Consolas",
+    "precio": 399990,
+    "descripcion": "Consola Nintendo Switch OLED con pantalla de alta calidad.",
+    "imagen": "assets/img/nintendo-switch.avif"
+  },
+  {
+    "id": 4,
+    "nombre": "Control DualSense",
+    "categoria": "Accesorios",
+    "precio": 79990,
+    "descripcion": "Control inalámbrico DualSense para PlayStation 5.",
+    "imagen": "assets/img/dualsense.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Control Xbox Wireless",
+    "categoria": "Accesorios",
+    "precio": 69990,
+    "descripcion": "Control inalámbrico compatible con Xbox y PC.",
+    "imagen": "assets/img/xbox-controller.avif"
+  },
+  {
+    "id": 6,
+    "nombre": "Headset Gaming",
+    "categoria": "Accesorios",
+    "precio": 49990,
+    "descripcion": "Audífonos gaming con sonido envolvente.",
+    "imagen": "assets/img/headset-gaming.avif"
+  },
+  {
+    "id": 7,
+    "nombre": "Teclado Mecánico RGB",
+    "categoria": "Accesorios",
+    "precio": 59990,
+    "descripcion": "Teclado mecánico gaming con iluminación RGB.",
+    "imagen": "assets/img/teclado.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Mouse Gaming RGB",
+    "categoria": "Accesorios",
+    "precio": 34990,
+    "descripcion": "Mouse gaming de alta precisión con iluminación RGB.",
+    "imagen": "assets/img/mouse.jpg"
+  }
+]
